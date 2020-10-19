@@ -25,10 +25,7 @@ int main()
     ifstream inData; // These lines allow the file to be opened.
     inData.open("Temps.txt");
 
-    cout << "Temperatures:" << endl;
-    /*The line below displays a sort of guide to what the stars mean, the first "setw(6)" allows the different temperatures 
-    to be displayed to the left of the graph without issue.*/
-    cout << setw(10) << "-30" << setw(9) << '0' << setw(10) << "30" << setw(10) << "60" << setw(10) << "90" << setw(10) << "120" << endl;
+    chart()
    
     while (inData >> temperature)
     {  //This while loop is what allows the different temperatures to be repeated.
@@ -71,4 +68,12 @@ int main()
         inData.close(); //Closes the data file.
     cout << endl << "We have reached the end of the temperatures. If there is an error, please check your input file.\n" << endl;
     return 0;
+}
+
+void chart()
+{
+    cout << "Temperatures:" << endl;
+    /*The line below displays a sort of guide to what the stars mean, the first "setw(6)" allows the different temperatures
+    to be displayed to the left of the graph without issue.*/
+    cout << setw(10) << "-30" << setw(9) << '0' << setw(10) << "30" << setw(10) << "60" << setw(10) << "90" << setw(10) << "120" << endl;
 }
