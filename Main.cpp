@@ -69,5 +69,6 @@ int main()
         cout << endl;
     }
         inData.close(); //Closes the data file.
+    cout << endl << "We have reached the end of the temperatures. If there is an error, please check your input file.\n" << endl;
     return 0;
 }
