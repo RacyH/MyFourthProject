@@ -17,6 +17,8 @@ Design and write a C++ program that inputs a series of hourly temperature from a
 
 using namespace std; 
 
+void chart();
+
 int main()
 {
     float temperature;
@@ -25,7 +27,7 @@ int main()
     ifstream inData; // These lines allow the file to be opened.
     inData.open("Temps.txt");
 
-    chart()
+    chart();
    
     while (inData >> temperature)
     {  //This while loop is what allows the different temperatures to be repeated.
